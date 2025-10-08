@@ -23,8 +23,13 @@ cd webpConvert
 ```
 
 2. Install dependencies
+
+```bash
    npm install
+```
 
 3. run the app
 
+```bash
 npm start
+```
