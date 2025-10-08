@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebP Converter</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: #f7f7f7;
+      }
+      .card {
+        background: white;
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 400px;
+      }
+      input,
+      select,
+      button {
+        margin: 8px;
+        padding: 8px 12px;
+      }
+      #status {
+        white-space: pre-line;
+        margin-top: 1rem;
+        text-align: center;
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2>🖼️ WebP Converter</h2>
+
+      <button id="selectFileBtn">Choose file</button>
+      <br />
+
+      <label for="formatSelect">Convert to:</label>
+      <select id="formatSelect">
+        <option value="png">PNG</option>
+        <option value="jpeg">JPEG</option>
+      </select>
+      <br />
+
+      <button id="selectFolderBtn">📁 Chọn thư mục lưu</button>
+      <p id="outputPath">Chưa chọn thư mục</p>
+
+      <button id="convertBtn">Convert</button>
+
+      <p id="status"></p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
