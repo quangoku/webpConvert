@@ -34,16 +34,16 @@ selectFolderBtn.addEventListener("click", async () => {
 // convert event
 convertBtn.addEventListener("click", async () => {
   if (!inputFiles.length) {
-    status.textContent = "❗ Bạn chưa chọn file .webp";
+    status.textContent = "❗ Pls choose  .webp files";
     return;
   }
   if (!outputFolder) {
-    status.textContent = "❗ Bạn chưa chọn thư mục lưu";
+    status.textContent = "❗ Pls choose folder to save files";
     return;
   }
 
   const format = formatSelect.value;
-  status.textContent = "🔄 Đang chuyển đổi...";
+  status.textContent = "🔄 Converting ...";
 
   for (const inputPath of inputFiles) {
     try {
@@ -52,10 +52,10 @@ convertBtn.addEventListener("click", async () => {
 
       await webp.dwebp(inputPath, outputPath, "-o");
     } catch (error) {
-      status.textContent = `⚠️ Lỗi khi xử lý ${path.basename(inputPath)}`;
+      status.textContent = `⚠️ Failed to convert ${path.basename(inputPath)}`;
       return;
     }
   }
 
-  status.textContent = "✅ Hoàn tất chuyển đổi!";
+  status.textContent = "✅ Converted Successfully";
 });
